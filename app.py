@@ -54,10 +54,8 @@ if st.button('Check!'):
             result = model.predict(vector)
             if result[0] == 0:
                 st.success("This web page seems a legitimate!")
-                st.balloons()
             else:
                 st.warning("Attention! This web page is a potential PHISHING!")
-                st.snow()
 
     except re.exceptions.RequestException as e:
         print("--> ", e)
