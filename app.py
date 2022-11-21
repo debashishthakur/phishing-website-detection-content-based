@@ -53,9 +53,11 @@ if st.button('Check'):
             vector = [fe.create_vector(soup)]
             result = model.predict(vector)
             if result[0] == 0:
-                st.success("This web page seems a legitimate!")
+                st.success("This web site is legitimate!")
+                st.success('Real Website!', icon="✅")
             else:
                 st.warning("Attention! This web page is a potential PHISHING!")
+                st.warning('Phishing alert', icon="⚠️")
 
     except re.exceptions.RequestException as e:
         print("--> ", e)
