@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 primaryColor="#F63366"
 backgroundColor="#FFFFFF"
 textColor="#000000"
-font="sans serif
+font="sans serif"
 
 st.title('Phishing Website Detection using Machine Learning Algorithms')
 
