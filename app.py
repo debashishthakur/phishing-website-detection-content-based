@@ -6,12 +6,6 @@ import requests as re
 import matplotlib.pyplot as plt
 
 # col1, col2 = st.columns([1, 3])
-[theme]
-primaryColor="#F63366"
-backgroundColor="#FFFFFF"
-textColor="#000000"
-font="sans serif"
-
 st.title('Phishing Website Detection using Machine Learning Algorithms')
 
 choice = st.selectbox("Please select a machine learning model",
