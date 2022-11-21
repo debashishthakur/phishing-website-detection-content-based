@@ -6,6 +6,11 @@ import requests as re
 import matplotlib.pyplot as plt
 
 # col1, col2 = st.columns([1, 3])
+[theme]
+primaryColor="#F63366"
+backgroundColor="#FFFFFF"
+textColor="#000000"
+font="sans serif
 
 st.title('Phishing Website Detection using Machine Learning Algorithms')
 
@@ -20,22 +25,16 @@ model = ml.nb_model
 
 if choice == 'Gaussian Naive Bayes':
     model = ml.nb_model
-    st.write('GNB model is selected!')
 elif choice == 'Support Vector Machine':
     model = ml.svm_model
-    st.write('SVM model is selected!')
 elif choice == 'Decision Tree':
     model = ml.dt_model
-    st.write('DT model is selected!')
 elif choice == 'Random Forest':
     model = ml.rf_model
-    st.write('RF model is selected!')
 elif choice == 'AdaBoost':
     model = ml.ab_model
-    st.write('AB model is selected!')
 elif choice == 'Neural Network':
     model = ml.nn_model
-    st.write('NN model is selected!')
 else:
     model = ml.kn_model
     st.write('KN model is selected!')
@@ -53,10 +52,10 @@ if st.button('Check'):
             vector = [fe.create_vector(soup)]
             result = model.predict(vector)
             if result[0] == 0:
-                st.success("This web site is legitimate!")
+                st.success("This website is legitimate!")
                 st.success('Real Website!', icon="✅")
             else:
-                st.warning("Attention! This web page is a potential PHISHING!")
+                st.warning("Attention! This website is a potential PHISHING!")
                 st.warning('Phishing alert', icon="⚠️")
 
     except re.exceptions.RequestException as e:
