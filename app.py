@@ -23,7 +23,7 @@ if choice == 'Gaussian Naive Bayes':
 
 elif choice == 'Decision Tree':
     model = ml.dt_model
-    st.write('Decision Tree model is selected!')
+    st.write('Decision Tree model is a selected!')
 
 elif choice == 'Random Forest':
     model = ml.rf_model
