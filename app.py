@@ -19,13 +19,19 @@ model = ml.nb_model
 
 if choice == 'Gaussian Naive Bayes':
     model = ml.nb_model
+    st.write('Naive Bayes model is selected!')
+
 elif choice == 'Decision Tree':
     model = ml.dt_model
+    st.write('Decision Tree model is selected!')
+
 elif choice == 'Random Forest':
     model = ml.rf_model
-else:
-    model = ml.kn_model
-    st.write('KN model is selected!')
+    st.write('Random Forest model is selected!')
+
+elif choice == 'SVM':
+    model = ml.svm_model
+    st.write('SVM model is selected!')
 
 
 url = st.text_input('Enter the URL')
