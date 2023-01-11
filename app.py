@@ -11,7 +11,7 @@ st.title('Phishing Website Detection using Machine Learning Algorithms')
 choice = st.selectbox("Please select a machine learning model",
                  [
                      'Gaussian Naive Bayes', 'Decision Tree', 'Random Forest',
-                     'K-Neighbours'
+                     'K-Neighbours', 'SVM'
                  ]
                 )
 
