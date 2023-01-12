@@ -39,7 +39,8 @@ if st.button('Check'):
     try:
         response = re.get(url, verify=False, timeout=4)
         if response.status_code != 200:
-            print(". HTTP connection was not successful for the URL: ", url)
+            st.warning("Attention! This website is a potential PHISHING!")
+            st.warning('Phishing alert', icon="⚠️")
         else:
             soup = BeautifulSoup(response.content, "html.parser")
             vector = [fe.create_vector(soup)]
