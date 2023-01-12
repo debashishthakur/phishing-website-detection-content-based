@@ -53,6 +53,8 @@ if st.button('Check'):
                 st.warning('Phishing alert', icon="⚠️")
 
     except re.exceptions.RequestException as e:
+        st.warning("Attention! This website is a potential PHISHING!")
+        st.warning('Phishing alert', icon="⚠️")
         print("--> ", e)
 
 
